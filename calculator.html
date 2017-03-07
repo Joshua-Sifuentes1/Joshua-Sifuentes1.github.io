@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>Calculator</title>
+		<meta charset="utf-8">
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="/css/calculator.css">
+
+	</head>
+	<body>
+		<main>
+			<div class="calculator">
+				<div class="input-box">
+					<input class="input-box-number" type="text" id="left-box" name="left-box" readonly>
+					<input class="input-box-operation" type="text" id="middle-box" name="middle-box" readonly>
+					<input class="input-box-number" type="text" id="right-box" name="right-box" readonly>
+				</div>
+				<div class="buttons-row1">
+					<button class="box btn btn-warning" id="square-root">&radic;</button>
+					<button class="box btn btn-warning" id="sign-change">+/-</button>
+					<button class="box btn btn-warning" id="percentage">%</button>
+					<button class="box btn btn-warning" id="addition">+</button>
+				</div>
+				<div class="buttons-row2">
+					<button class="box btn btn-primary number" id="number-one">1</button>
+					<button class="box btn btn-primary number" id="number-two">2</button>
+					<button class="box btn btn-primary number" id="number-three">3</button>
+					<button class="box btn btn-warning" id="subtract">-</button>
+				</div>
+				<div class="buttons-row3">
+					<button class="box btn btn-primary number" id="number-four">4</button>
+					<button class="box btn btn-primary number" id="number-five">5</button>
+					<button class="box btn btn-primary number" id="number-six">6</button>
+					<button class="box btn btn-warning" id="multiply">*</button>
+				</div>
+				<div class="buttons-row4">	
+					<button class="box btn btn-primary number" id="number-seven">7</button>
+					<button class="box btn btn-primary number" id="number-eight">8</button>
+					<button class="box btn btn-primary number" id="number-nine">9</button>
+					<button class="box btn btn-warning" id="divide">/</button>
+				</div>
+				<div class="buttons-row5">
+					<button class="box btn btn-info" id="clear">C</button>
+					<button class="box btn btn-primary number" id="number-zero">0</button>
+					<button class="box btn btn-primary number" id="decimal">.</button>
+					<button class="box btn btn-warning" id="power">^</button>
+				</div>
+				<div class="buttons-row6">
+					<button class="box btn btn-danger" id="all-clear">AC</button>
+					<button class="box btn btn-success" id="equals">=</button>
+				</div>
+			</div>
+		</main>
+
+		<script src="/js/calculator.js"></script>
+	</body>
+</html>

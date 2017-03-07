@@ -1,0 +1,74 @@
+/*Calculator box model*/
+body {
+	background-color: #0B5563;
+}
+.calculator {
+	height: 460px;
+	width: 332px;
+	border: 1px solid #A2BCE0;
+	padding: 15px;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	margin-top: 120px; 
+	margin-left: -100px;
+	float: center;
+	background-color: #9ac2c5;
+	border-radius: 5px;
+}
+
+/*Left and right input box for values*/
+div>input.input-box-number {
+	border-color: black;
+	background-color: #5E5C6C;
+	color: white;
+	width: 116px;
+	height: 60px;
+	font-size: 15px;
+	margin: 0px;
+	border-radius: 5px;
+}
+
+/*Middle box for operation input box*/
+div>input.input-box-operation {
+	border-color: black;
+	background-color: #5E5C6C;
+	color: white;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	margin: 0px;
+	border-radius: 5px;
+}
+#all-clear {
+	width: 225px;
+}
+
+/*The zero button*/
+#number-zero {
+	height: 60px;
+	width: 75px;
+}
+
+/*buttons on calculator*/
+button.box {
+/*	border-radius: 60px;*/
+	height: 60px;
+	width: 75px;
+	padding: 2px;
+	text-align: center;
+	font-weight: bold;
+	float: left;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+/*Button row clearing*/
+.buttons-row1, .buttons-row2, .buttons-row3, .buttons-row4, .buttons-row5, .buttons-row5 {
+	clear: left;
+}
+
+/*Margin for top row between input boxes*/
+#square-root, #sign-change, #percentage, #addition {
+	margin-top: 10px;
+}
