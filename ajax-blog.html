@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AJAX Blog</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	</head>
+	<body>
+		<h1 id="title">My Blog</h1>
+		<main>
+			<div id="posts">
+				
+			</div>
+			<button id="refresh" type="button">Reresh Blog Posts</button>
+
+		</main>
+
+
+
+
+
+		<script
+			src="https://code.jquery.com/jquery-2.2.4.min.js"
+			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+		<script>
+			(function(){
+				"use strict";
+
+				var posts = $("#posts");
+
+				function getDataFromJson(data) {
+
+					//URL for JSON file
+					var url = "/data/blog.json";
+
+					//the request for the JSON file
+					var request = $.get(url);
+
+					// .fail() callback functions that runs if there is something wrong.
+					request.fail(function(data, status) {
+						console.log(data);
+					});
+
+					request.done(function(data) {
+						addBlogInfo(data);
+
+						$("h2").click(function() {
+							$(this).next().fadeToggle();
+
+						});
+					});
+
+				}
+
+				function addBlogInfo(blogs) {
+
+					var htmlString = "";
+					var category = "";
+
+					blogs.forEach(function(blog){
+
+						htmlString += "<article class='container'>";
+						htmlString += "<h2 class='show-post'>" + blog.title + "</h2>";
+						htmlString += "<p class='toggle'>" + blog.content + "</p>";
+						htmlString += "<p class='toggle'> <em>Categories:</em> " + "<button>" + blog.categories + "</button>" + "</p>";
+						htmlString += "<p class='toggle'>" + blog.date + "</p>";
+						htmlString += "</article>";
+
+					});
+
+					posts.html(htmlString);
+
+				}
+				getDataFromJson();
+
+				$("#refresh").click(function(){
+
+					posts.html("");
+					getDataFromJson();
+
+				});
+
+
+
+
+			})();
+		</script>
+
+	</body>
+</html>
