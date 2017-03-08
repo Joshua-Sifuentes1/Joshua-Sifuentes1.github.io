@@ -1,0 +1,26 @@
+/*#aboutme {
+	background-color: #EEEEEE;
+	position: relative;
+	left: 100px;
+}*/
+/*body {
+	background-image: url(/img/space.png);
+	background-size: 100%;
+}
+.jumbotron {
+   background: rgb(200, 54, 54);  This is for ie8 and below 
+   background: rgba(238, 238, 238, 0.7); 
+}*/
+/*.opacity-back {
+	opacity: 0.7;
+}*/
+.footer {
+	background-color: #222222;
+}
+.copyright {
+	text-align: center;
+	color: white;
+	font-family: times;
+	height: 4em;
+	line-height: 4em;
+}

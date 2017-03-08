@@ -1,0 +1,15 @@
+img {
+	height: 50px;
+	width: 600px;
+	display: block;
+    margin: 0 auto;
+}
+
+h1 {
+	color: #A31621;
+	text-align: center;
+}
+
+body {
+	background-color: #252422;
+}

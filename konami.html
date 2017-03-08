@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Konami Code</title>
+		<link rel="stylesheet" href="/css/konami.css">
+	</head>
+	<body>
+		<h1>Welcome to the Konami Code.</h1>
+
+		<img class="invisible" src="/img/kc.png">
+
+
+		<script
+			src="https://code.jquery.com/jquery-2.2.4.min.js"
+			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			crossorigin="anonymous">	
+		</script>
+
+			<script>
+				$(document).ready(function () {
+
+					
+
+					$(document).keyup(function(event){
+						console.log(event.keyCode);
+					});
+
+					// array for correct combination of keys
+					var correctCombo = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+					// start position of the array
+					var comboStart = 0;
+
+					$(document).keyup(function(e){
+
+						if(e.keyCode == correctCombo[comboStart]){
+
+							comboStart++;
+
+						} else {
+
+							comboStart = 0;
+							
+						}	
+
+						if(comboStart == correctCombo.length){
+
+							activateCheat();
+
+							alert("Cheats Activated!!!");
+
+						}
+						
+					});
+
+					function activateCheat(){
+						$("body").css("background-image", "url('/img/ocelot.gif");
+						// $("body").css("background-image", "url('/img/kojima.gif");
+						// $("body").css("background-repeat", "no-repeat");
+						// $("body").css("background-position", "center");
+					}
+
+				}); //closing tag for **$(document).ready(function () {**
+			</script>
+
+	</body>
+</html>
