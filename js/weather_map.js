@@ -3,7 +3,7 @@ $(document).ready(function(){
 	"use strict";
 
 	var APPID = "7f8e3aa0aad113510e0c1eaafd1c17b8";
-	var url = "http://api.openweathermap.org/data/2.5/forecast/daily";
+	var url = "https://api.openweathermap.org/data/2.5/forecast/daily";
 	var lat;
 	var long;
 
